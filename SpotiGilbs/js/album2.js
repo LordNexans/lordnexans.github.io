@@ -31,7 +31,7 @@ function createTrackItem(index,name,duration){
   var listAudio = [
     {
       name:"Aline - Mathias",
-      file:"./song/souvenir-dete/aline.mp3",
+      file:"./song/souvenir-dete/Aline.mp3",
       duration:"03:06"
     },
     {
