@@ -4,12 +4,15 @@
 }
 
 body{
-  background-color: white;
   color: #ffc266;
+  background-color: white;
   font-family: 'Roboto', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 #myProgress {
-  width: 400px;
+  width: 99%;
    background-color: #d9d9f2; 
   cursor: pointer;
   border-radius: 10px;
@@ -68,11 +71,11 @@ padding-top: 20px;
 
 .player-ctn{
   border-radius: 15px;
-  width: 420px;
+  width: 100%;
   padding: 10px;
   background-color: #373737;
-  margin:auto;
-  margin-top: 100px;
+  margin:0;
+  /* margin-top: 50px; */
 }
 
 .playlist-track-ctn{
@@ -122,4 +125,31 @@ padding-top: 20px;
 .fas{
   color: #ffc266;
   font-size: 20px;
+}
+
+.title-album {
+  /* color: black; */
+  /* margin-top: 40px; */
+  text-align: center;
+  width: 400px;
+  padding: 10px;
+}
+
+.title-album img {
+  width: 300px;
+  height: 300px;
+  margin-top: 25px; /* Adjust margin for vertical alignment */
+  border-radius: 20px;
+}
+
+.title-album h1 {
+  text-align: left;
+}
+
+.title-album h3 {
+  text-align: left;
+}
+
+.title-album h5 {
+  text-align: left;
 }

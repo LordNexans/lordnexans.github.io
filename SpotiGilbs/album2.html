@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lordnexans.github.io/SpotiGilbs/album2.html">
+  <meta property="og:title" content="SpotiGilbs • Souvenirs d'été">
+  <meta property="og:description"
+      content="SpotiGilbs est une plateforme musical immersive où écouter et découvrir une multitude de morceaux dans un environnement convivial et dynamique">
+  <meta property="og:image" content="https://i.ibb.co/0mt8VSN/Logo.png">
   <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
   <title>SpotiGilbs</title>
   <link rel="stylesheet" href="./css/album2.css">
@@ -12,8 +18,6 @@
 </head>
 
 <body>
-
-
   <audio id="myAudio" ontimeupdate="onTimeUpdate()">
     <!-- <source src="audio.ogg" type="audio/ogg"> -->
     <source id="source-audio" src="" type="audio/mpeg">
@@ -46,6 +50,12 @@
   </nav>
 
   <div class="player-ctn">
+    <div class="title-album">
+      <img src="./img/souvenirs-dete.jpg">
+      <h1>Souvenirs d'été </h1>
+      <h3>Les Gilberts</h3>
+      <h5>Album •	2024</h5>
+    </div>
     <div class="infos-ctn">
       <div class="timer">00:00</div>
       <div class="title"></div>
@@ -91,7 +101,6 @@
     <div class="playlist-ctn"></div>
   </div>
   <script src="./js/album2.js"></script>
-
 </body>
 
 </html>
