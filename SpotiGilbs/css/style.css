@@ -5,26 +5,48 @@
 
 .container2 {
     text-align: center;
+    padding-top: 100px;
   }
   .box {
-    width: 350px;
-    height: 390px;
-    border: 1px solid #ccc;
+    width: 110px;
+    height: 200px;
+    /* border: 1px solid #ccc; */
     margin: 10px;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     vertical-align: top; /* Ensures alignment of boxes */
     border-radius: 20px;
   }
   .box img {
-    width: 300px;
-    height: 300px;
+    width: 110px;
+    height: 110px;
     margin-top: 25px; /* Adjust margin for vertical alignment */
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
 
   .title-index {
     margin: 20px;
     margin-top: 40px;
   }
+
+  .size-title {
+    padding-top: 5px;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .size-subtitle {
+    padding-top: 5px;
+    color: lightgray;
+    font-size: small;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

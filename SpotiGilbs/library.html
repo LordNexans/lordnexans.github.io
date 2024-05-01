@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="./img/Logo.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lordnexans.github.io/SpotiGilbs">
+  <meta property="og:title" content="SpotiGilbs">
+  <meta property="og:description"
+    content="SpotiGilbs est une plateforme musical immersive où écouter et découvrir une multitude de morceaux dans un environnement convivial et dynamique">
+  <meta property="og:image" content="https://i.ibb.co/0mt8VSN/Logo.png">
+  <title>SpotiGilbs</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/nav-bar.css">
+  <link rel="stylesheet" href="./css/player.css">
+  <link rel="stylesheet" href="./css/overlay.css">
+  <link rel="stylesheet" href="./css/album2.css">
+  <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+
+<body>
+  <audio id="myAudio" ontimeupdate="onTimeUpdate()">
+    <!-- <source src="audio.ogg" type="audio/ogg"> -->
+    <source id="source-audio" src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <nav class="top-nav">
+    <div class="text-top-nav">
+      <h3>Your Library</h3>
+    </div><br>
+    <div class="filter-top-nav">
+      <button onclick="filterByCategory('Album')">Albums</button>
+      <button onclick="filterByCategory('Playlist')">Playlists</button>
+      <button onclick="filter('name')">Name</button>
+      <button onclick="filter('creator')">Artists</button>
+
+    </div>
+  </nav>
+
+  <div class="container2" id="boxes">
+    <!-- <div class="title-index">
+      <h1>Albums: </h1>
+    </div> -->
+    <div class="box" onclick="toggleOverlay('page1')" id="album-1" data-name="Copie conforme" data-category="Album"
+      data-creator="Gilberts">
+      <img src="./img/copie-conforme.png" alt="Image 1">
+      <div>
+        <p class="size-subtitle" id="tocrop">Copie Conforme</p>
+      </div>
+      <div>
+        <p class="size-subtitle" id="tocrop">Album • Les Gilberts</p>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleOverlay('page3')" id="album-2" data-name="Souvenirs d'été" data-category="Album"
+      data-creator="Gilberts">
+      <img src="./img/souvenirs-dete.jpg" alt="Image 2">
+      <div>
+        <p class="size-title" id="tocrop">Souvenirs d'été</p>
+      </div>
+      <div>
+        <p class="size-subtitle" id="tocrop">Album • Les Gilberts</h5>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleOverlay('page4')" id="album-3" data-name="Anti-Raciste" data-category="Album"
+      data-creator="Antoine">
+      <img src="./img/anti-raciste.png" alt="Image 2">
+      <div>
+        <p class="size-title" id="tocrop">Anti-Raciste</p>
+      </div>
+      <div>
+        <p class="size-subtitle" id="tocrop">Album • Antoine</p>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleOverlay('page5')" id="autres" data-name="Autres singles" data-category="Playlist"
+      data-creator="X">
+      <img src="./img/Autre.png" alt="Image 3">
+      <div>
+        <p class="size-subtitle" id="tocrop">Autres</p>
+      </div>
+      <div>
+        <p class="size-subtitle" id="tocrop">Playlist</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay de lecture de musique -->
+  <div class="player-big" id="page2">
+    <div class="head-player">
+      <a onclick="toggleOverlay('page2')">
+        <i class="material-icons" style="font-size: 50px">keyboard_arrow_down</i>
+      </a>
+    </div>
+    <div class="img-player">
+      <img src="" id="dynamicImage">
+    </div>
+    <div class="text-player">
+    </div>
+    <div class="player-ctn">
+      <div class="infos-ctn">
+        <h1>
+          <div class="title" id="dynamicText"></div>
+          </h6>
+      </div>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+      <div class="infos-ctn">
+        <div class="timer">00:00</div>
+        <div class="space"></div>
+        <div class="duration">00:00</div>
+      </div>
+      <div class="btn-ctn">
+        <div class="btn-action first-btn" onclick="previous()" style="margin: 10px;">
+          <div id="btn-faws-back">
+            <i class='fas fa-step-backward' style="font-size: 40px;"></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="rewind()" style="margin: 10px;">
+          <div id="btn-faws-rewind">
+            <i class='fas fa-backward' style="font-size: 40px;"></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="toggleAudio()" style="margin: 10px;">
+          <div id="btn-faws-play-pause">
+            <i class='fas fa-play' id="icon-play" style="font-size: 40px;"></i>
+            <i class='fas fa-pause' id="icon-pause" style="font-size: 40px; display: none;"></i>
+          </div>
+        </div>
+        <div class="btn-play" onclick="forward()" style="margin: 10px;">
+          <div id="btn-faws-forward">
+            <i class='fas fa-forward' style="font-size: 40px;"></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="next()" style="margin: 10px;">
+          <div id="btn-faws-next">
+            <i class='fas fa-step-forward' style="font-size: 40px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay de l'album copie conforme -->
+  <div class="player-ctn" id="page1">
+    <a onclick="toggleOverlay('page1')">
+      <i class="material-icons" style="font-size: 50px">arrow_back</i>
+    </a>
+    <div class="title-album">
+      <img src="./img/copie-conforme.png">
+      <h1>Copie conforme</h1>
+      <h3>Les Gilberts</h3>
+      <h5>Album • 2023</h5>
+    </div>
+    <div class="btn-ctn" id="btn-left">
+      <div class="btn-action" onclick="toggleAudio()">
+        <i class="material-icons" style="font-size: 50px">play_circle</i>
+      </div>
+    </div>
+    <div class="playlist-ctn1"></div>
+  </div>
+
+  <!-- Overlay de l'album souvenirs d'été -->
+  <div class="player-ctn" id="page3">
+    <a onclick="toggleOverlay('page3')">
+      <i class="material-icons" style="font-size: 50px">arrow_back</i>
+    </a>
+    <div class="title-album">
+      <img src="./img/souvenirs-dete.jpg">
+      <h1>Souvenirs d'été</h1>
+      <h3>Les Gilberts</h3>
+      <h5>Album • 2024</h5>
+    </div>
+    <div class="btn-ctn" id="btn-left">
+      <div class="btn-action" onclick="toggleAudio()">
+        <i class="material-icons" style="font-size: 50px">play_circle</i>
+      </div>
+    </div>
+    <div class="playlist-ctn2"></div>
+  </div>
+
+  <!-- Overlay de l'album antiraciste d'antoine -->
+  <div class="player-ctn" id="page4">
+    <a onclick="toggleOverlay('page4')">
+      <i class="material-icons" style="font-size: 50px">arrow_back</i>
+    </a>
+    <div class="title-album">
+      <img src="./img/anti-raciste.png">
+      <h1>Anti-Raciste</h1>
+      <h3>Antoine</h3>
+      <h5>Album • 2024</h5>
+    </div>
+    <div class="btn-ctn" id="btn-left">
+      <div class="btn-action" onclick="toggleAudio()">
+        <i class="material-icons" style="font-size: 50px">play_circle</i>
+      </div>
+    </div>
+    <div class="playlist-ctn3"></div>
+  </div>
+
+  <!-- Overlay de la playlist autre single -->
+  <div class="player-ctn" id="page5">
+    <a onclick="toggleOverlay('page5')">
+      <i class="material-icons" style="font-size: 50px">arrow_back</i>
+    </a>
+    <div class="title-album">
+      <img src="./img/Autre.png">
+      <h1>Autres singles</h1>
+      <h5>Playlist • 44min</h5>
+    </div>
+    <div class="btn-ctn" id="btn-left">
+      <div class="btn-action" onclick="toggleAudio()">
+        <i class="material-icons" style="font-size: 50px">play_circle</i>
+      </div>
+    </div>
+    <div class="playlist-ctn4"></div>
+  </div>
+
+
+  <!-- lecteur de musique overlay bas -->
+  <div class="player-ctn">
+    <a class="visible">
+      <div class="player">
+        <div class="player-ctn">
+          <div class="infos-ctn2" onclick="toggleOverlay('page2')">
+            <!-- <div class="timer">00:00</div> -->
+            <div class="titlebis"></div>
+            <!-- <div class="title"></div> -->
+            <!-- <div class="duration">00:00</div> -->
+          </div>
+
+          <div class="btn-ctn" id="btn-flot">
+            <div class="btn-action" onclick="toggleAudio()">
+              <div id="btn-faws-play-pause">
+                <i class='fas fa-play' id="icon-play"></i>
+                <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+              </div>
+            </div>
+          </div>
+          <div id="myProgress" class="progress-flot">
+            <div id="myBar"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- barre de navigation bas -->
+  <nav class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+      <a href="./index.html">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">home</i>
+          Home
+        </div>
+      </a>
+    </div>
+
+    <div class="mobile-bottom-nav__item">
+      <a href="./clip.html">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">smart_display</i>
+          Clip
+        </div>
+      </a>
+    </div>
+
+    <div class="mobile-bottom-nav__item">
+      <a href="./library.html">
+        <div class="mobile-bottom-nav__item-content">
+          <i class="material-icons">library_books</i>
+          Your Library
+        </div>
+      </a>
+    </div>
+
+  </nav>
+  <script src="./js/screen.js"></script>
+  <script src="./js/autres.js"></script>
+  <script src="./js/nav-bar.js"></script>
+  <script src="./js/overlay.js"></script>
+  <script src="./js/filter.js"></script>
+</body>
+
+</html>

@@ -2,74 +2,51 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" href="./img/Logo.ico" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lordnexans.github.io/SpotiGilbs">
-  <meta property="og:title" content="SpotiGilbs">
-  <meta property="og:description"
-    content="SpotiGilbs est une plateforme musical immersive où écouter et découvrir une multitude de morceaux dans un environnement convivial et dynamique">
-  <meta property="og:image" content="https://i.ibb.co/0mt8VSN/Logo.png">
-  <title>SpotiGilbs</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/nav-bar.css">
+    <link rel="icon" href="./img/Logo.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lordnexans.github.io/SpotiGilbs">
+    <meta property="og:title" content="SpotiGilbs">
+    <meta property="og:description"
+        content="SpotiGilbs est une plateforme musical immersive où écouter et découvrir une multitude de morceaux dans un environnement convivial et dynamique">
+    <meta property="og:image" content="https://i.ibb.co/0mt8VSN/Logo.png">
+    <title>SpotiGilbs</title>
+    <link rel="stylesheet" href="./css/nav-bar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <div class="navbar">
-      <div class="container nav-container">
-        <input class="checkbox" type="checkbox" name="" id="" />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
+    <!-- barre de navigation bas -->
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+            <a href="./index.html">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">home</i>
+                    Home
+                </div>
+            </a>
         </div>
-        <div class="logo">
-          <h1>SpotiGilbs</h1>
+
+        <div class="mobile-bottom-nav__item">
+            <a href="./clip.html">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">smart_display</i>
+                    Clip
+                </div>
+            </a>
         </div>
-        <div class="menu-items">
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./album1.html">Copie Conforme</a></li>
-          <li><a href="./album2.html">Souvenirs d'été</a></li>
-          <li><a href="./album3.html">Anti-Raciste</a></li>
-          <li><a href="./autres.html">Autres</a></li>
-          <!-- <li><a href="./song/Stockage-zip/copie-conforme.zip" download="copie-conforme.zip">Télécharger l'album</a></li> -->
+
+        <div class="mobile-bottom-nav__item">
+            <a href="./library.html">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">library_books</i>
+                    Your Library
+                </div>
+            </a>
         </div>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container2">
-    <div class="title-index">
-      <h1>Albums: </h1>
-    </div>
-    <div class="box" onclick="window.location.href='album1.html'">
-      <img src="./img/copie-conforme.png" alt="Image 1">
-      <div><h3>Copie Conforme</h3></div>
-      <div><h5>Album • Les Gilberts</h5></div>
-    </div>
-
-    <div class="box" onclick="window.location.href='album2.html'">
-      <img src="./img/souvenirs-dete.jpg" alt="Image 2">
-      <div><h3>Souvenirs d'été</h3></div>
-      <div><h5>Album • Les Gilberts</h5></div>
-    </div>
-
-    <div class="box" onclick="window.location.href='album3.html'">
-      <img src="./img/anti-raciste.png" alt="Image 2">
-      <div><h3>Anti-Raciste</h3></div>
-      <div><h5>Album • Antoine</h5></div>
-    </div>
-
-    <div class="box" onclick="window.location.href='autres.html'">
-      <img src="./img/Autre.png" alt="Image 3">
-      <div><h3>Autres</h3></div>
-      <div><h5>Playlist</h5></div>
-    </div>
-  </div>
-
+    </nav>
 </body>
 
 </html>
