@@ -21,18 +21,18 @@
 .img-player {
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .img-player img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
 }
 
 .player-big .infos-ctn {
     text-align: left;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
 .player-big .infos-ctn .space {
@@ -48,10 +48,21 @@
 }
 
 .player-big .infos-ctn .title {
-    position: fixed;
-    left: 0;
+    /* position: fixed;
+    left: 0; */
     /* font-size: 34px; */
+    font-size: large;
 }
+
+.subtitle-overlay-player {
+    padding-top: 5px;
+    color: lightgray;
+    font-size: small;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
 .player-big .player-ctn {
     padding-bottom: 0;

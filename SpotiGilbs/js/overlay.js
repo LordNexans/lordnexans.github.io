@@ -11,6 +11,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const div = document.getElementById('dynamicText');
     const text = div.textContent;
     if (text.includes('-')) {
-        div.innerHTML = text.replace(/-/g, '</h1><br><h6>');
+        div.innerHTML = text.replace(/-/g, '</p><br><p class="subtitle-overlay-player">');
     }
 });

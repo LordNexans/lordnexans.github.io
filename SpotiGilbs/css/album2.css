@@ -47,7 +47,7 @@ body{
 .btn-ctn, .infos-ctn{
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .infos-ctn{
 padding-top: 20px;
@@ -67,7 +67,7 @@ padding-top: 20px;
 
 .infos-ctn2 > div {
   margin-bottom: 8px;
-  color: white;
+  /* color: white; */
  }
 
 .first-btn{

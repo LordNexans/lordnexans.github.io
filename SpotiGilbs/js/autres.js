@@ -360,7 +360,7 @@ function loadNewTrack(index) {
   let textaudio = listAudio[index].name
   let textaudio2
   if (textaudio.includes('-')) {
-    textaudio2 = textaudio.replace(/-/g, '</h1><br><h6>');
+    textaudio2 = textaudio.replace(/-/g, '<br><p class="subtitle-overlay-player">');
   }
   document.querySelector('.title').innerHTML = textaudio2
   document.querySelector('.titlebis').innerHTML = textaudio
