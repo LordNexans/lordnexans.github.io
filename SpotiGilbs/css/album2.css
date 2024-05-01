@@ -41,7 +41,16 @@ body{
 .btn-action{
   cursor: pointer;
   padding-top: 10px;
-  width: 30px;
+  width: 100%;
+  text-align: right;
+}
+
+.btn-action #downloading {
+  text-align: left;
+}
+
+.btn-action #play_circle {
+  text-align: right;
 }
 
 .btn-ctn, .infos-ctn{
@@ -53,6 +62,13 @@ body{
 padding-top: 20px;
 }
 
+.btn-ctn {
+  /* justify-content: center; */
+}
+
+#navigation-player  {
+  justify-content: center;
+}
 
 .btn-ctn > div {
  padding: 5px;
@@ -189,6 +205,7 @@ padding-top: 20px;
 
 .title-album h3 {
   text-align: left;
+  padding-bottom: 10px;
 }
 
 .title-album h5 {
@@ -204,6 +221,21 @@ padding-top: 20px;
 }
 
 #btn-left {
-  margin-left: 80%;
+  /* margin-left: 80%; */
   font-size: 48px;
+}
+
+/* #long-div-play {
+  width: 300px;
+} */
+
+
+#play_circle {
+  justify-content: right;
+
+}
+
+#downloading {
+  padding-left: 10px;
+  color: greenyellow;
 }
