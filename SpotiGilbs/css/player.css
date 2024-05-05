@@ -31,12 +31,17 @@
 }
 
 .player-big .infos-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
     text-align: left;
     padding-bottom: 20px;
 }
 
 .player-big .infos-ctn .space {
-    padding: 0 150px 0 150px;
+    /* padding: 0 150px 0 150px; */
 }
 
 .player-big .infos-ctn .timer {

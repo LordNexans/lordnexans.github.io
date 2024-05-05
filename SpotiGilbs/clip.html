@@ -16,23 +16,32 @@
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/clip.css">
     <link rel="stylesheet" href=".css/head.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/nav-bar.css"> -->
+    <link rel="stylesheet" href="./css/player.css">
+    <link rel="stylesheet" href="./css/overlay.css">
+    <link rel="stylesheet" href="./css/album2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header-clips">
+    <nav class="top-nav">
+        <div class="text-top-nav">
+            <h2>Your Library</h2>
+        </div><br>
+        <div class="filter-top-nav">
+            <button onclick="filter('date')">Dates</button>
+            <button onclick="filter('name')">Name</button>
+            <button onclick="filter('creator')">Artists</button>
+            <button onclick="filterByCategory('Musique')">Musics</button>
+            <button onclick="filterByCategory('Autres')">Others</button>
 
 
-        <h1>
-            <div class="img-header">
-                <img src="./img/Logo.png">
-            </div>
-            
-            Spoti<b style="color: greenyellow;">Gilbs</b> • Clips
-        </h1>
-    </div>
-    <div class="container-video-clip">
-        <a href="./clip/video1.html">
+        </div>
+    </nav>
+    <div class="container-video-clip" id="boxes">
+        <a href="./clip/video1.html" class="box-filter" data-name="Stan - Ryan Gosling Edit" data-category="Autres"
+        data-creator="Antoine" data-date="26/08/2023">
             <div class="box-video">
                 <div class="preview-video">
                     <img src="./img/vid-preview/stan.png">
@@ -52,7 +61,8 @@
                 </div>
             </div>
         </a>
-        <a href="./clip/video2.html">
+        <a href="./clip/video2.html" class="box-filter" data-name="Florilège d'Antoine Bigard" data-category="Autres"
+        data-creator="Antoine" data-date="20/09/2023">
             <div class="box-video">
                 <div class="preview-video">
                     <img src="./img/vid-preview/bigard.png">
@@ -72,7 +82,8 @@
                 </div>
             </div>
         </a>
-        <a href="./clip/video3.html">
+        <a href="./clip/video3.html" class="box-filter" data-name="Mathias Clash Antoine" data-category="Musique"
+        data-creator="Mathias" data-date="21/09/2023">
             <div class="box-video">
                 <div class="preview-video">
                     <img src="./img/vid-preview/cyprien.png">
@@ -92,7 +103,8 @@
                 </div>
             </div>
         </a>
-        <a href="./clip/video4.html">
+        <a href="./clip/video4.html" class="box-filter" data-name="Alice - PETETE (Clip officiel)" data-category="Musique"
+        data-creator="Alice" data-date="01/12/2023">
             <div class="box-video">
                 <div class="preview-video">
                     <img src="./img/vid-preview/petete.png">
@@ -112,7 +124,8 @@
                 </div>
             </div>
         </a>
-        <a href="./clip/video5.html">
+        <a href="./clip/video5.html" class="box-filter" data-name="Antoine - Dansez le chalançon (Clip officiel)" data-category="Musique"
+        data-creator="Antoine" data-date="01/12/2023">
             <div class="box-video">
                 <div class="preview-video">
                     <img src="./img/vid-preview/chalancon.png">
@@ -132,7 +145,8 @@
                 </div>
             </div>
         </a>
-        <a href="./clip/video6.html">
+        <a href="./clip/video6.html" class="box-filter" data-name="Mathias ft. Claire - On ne porte pas de sous vêtement (Clip officiel)" data-category="Musique"
+        data-creator="Mathias" data-date="01/12/2023">
             <div class="box-video">
                 <div class="preview-video">
                     <img src="./img/vid-preview/vetements.png">
@@ -187,6 +201,7 @@
     </nav>
 </body>
 <script src="./js/head.js"></script>
+<script src="./js/filter-clip.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </html>
